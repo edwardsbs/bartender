@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KFoLG6xX3AU=",
+  "dgSpecHash": "Yz0M3d76e2o=",
   "success": true,
-  "projectFilePath": "C:\\repos\\Bartender App\\bartender service\\Bartender.Api\\Bartender.Api\\Bartender.Api.csproj",
+  "projectFilePath": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Bartender.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Brandon\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Brandon\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

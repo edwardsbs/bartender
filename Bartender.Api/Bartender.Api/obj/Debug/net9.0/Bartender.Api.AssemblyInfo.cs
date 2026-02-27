@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bartender.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb8d414a333a3f513b2dc400b950af394d3916a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bartender.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bartender.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

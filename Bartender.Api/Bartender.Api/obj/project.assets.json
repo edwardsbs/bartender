@@ -4649,11 +4649,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\Bartender App\\bartender service\\Bartender.Api\\Bartender.Api\\Bartender.Api.csproj",
+      "projectUniqueName": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Bartender.Api.csproj",
       "projectName": "Bartender.Api",
-      "projectPath": "C:\\repos\\Bartender App\\bartender service\\Bartender.Api\\Bartender.Api\\Bartender.Api.csproj",
+      "projectPath": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Bartender.Api.csproj",
       "packagesPath": "C:\\Users\\Brandon\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\Bartender App\\bartender service\\Bartender.Api\\Bartender.Api\\obj\\",
+      "outputPath": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
