@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.scss"],
+  "sourcesContent": ["/* You can add global styles to this file, and also import other style files */\r\n@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');\r\n\r\n* { box-sizing: border-box; }\r\n/* Apply font to the whole app */\r\nhtml, body {\r\n    height: 100%;\r\n  font-family: 'raleway';\r\n  margin: 0;\r\n  padding: 0;\r\n  font-size: 22px;\r\n  background: #0b0e14;\r\n  color: #e9eefc;\r\n}\r\n\r\nbutton { cursor: pointer; }"],
+  "mappings": ";;;AAGA;AAAI,cAAA;;AAEJ;AAAA;AACI,UAAA;AACF,eAAA;AACA,UAAA;AACA,WAAA;AACA,aAAA;AACA,cAAA;AACA,SAAA;;AAGF;AAAS,UAAA;;",
+  "names": []
+}

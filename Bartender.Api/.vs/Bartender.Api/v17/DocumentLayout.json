@@ -3,6 +3,17 @@
   "WorkspaceRootPath": "C:\\repos\\Bartender-App\\Bartender.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|solutionrelative:bartender.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|solutionrelative:bartender.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brandon\\AppData\\Roaming\\Microsoft\\UserSecrets\\e4ea3cd2-01ae-49c2-9b6d-788ae255db1f\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\services\\handlers\\recipes\\commands\\editrecipe\\editrecipehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|solutionrelative:bartender.api\\services\\handlers\\recipes\\commands\\editrecipe\\editrecipehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +32,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|solutionrelative:bartender.api\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|solutionrelative:bartender.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\services\\handlers\\methods\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,13 +56,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\domain\\models\\recipestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|solutionrelative:bartender.api\\domain\\models\\recipestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brandon\\AppData\\Roaming\\Microsoft\\UserSecrets\\e4ea3cd2-01ae-49c2-9b6d-788ae255db1f\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|solutionrelative:bartender.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A216BE9A-8E3F-49FF-8DF7-B6EF36068207}|Bartender.Api\\Bartender.Api.csproj|c:\\repos\\bartender-app\\bartender.api\\bartender.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -129,7 +129,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -141,19 +141,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Program.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Program.cs",
               "ToolTip": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Program.cs",
               "RelativeToolTip": "Bartender.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:59:44.066Z"
+              "WhenOpened": "2026-02-20T01:59:44.066Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "RecipeController.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Controllers\\RecipeController.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Controllers\\RecipeController.cs",
@@ -161,11 +162,12 @@
               "RelativeToolTip": "Bartender.Api\\Controllers\\RecipeController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAgwC8AAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:39:18.313Z"
+              "WhenOpened": "2026-02-19T01:39:18.313Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AddRecipeHandler.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Services\\Handlers\\Recipes\\Commands\\AddRecipe\\AddRecipeHandler.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Services\\Handlers\\Recipes\\Commands\\AddRecipe\\AddRecipeHandler.cs",
@@ -173,11 +175,12 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Recipes\\Commands\\AddRecipe\\AddRecipeHandler.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAwwDkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T00:41:32.163Z"
+              "WhenOpened": "2026-02-20T00:41:32.163Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Dtos.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Services\\Handlers\\Models\\Dtos\\Dtos.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Services\\Handlers\\Models\\Dtos\\Dtos.cs",
@@ -185,7 +188,8 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Models\\Dtos\\Dtos.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAgwEkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:24:46.437Z"
+              "WhenOpened": "2026-02-19T01:24:46.437Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -197,7 +201,8 @@
               "RelativeToolTip": "Bartender.Api\\Migrations\\20260220020414_InitialMigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T02:04:14.488Z"
+              "WhenOpened": "2026-02-20T02:04:14.488Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -209,19 +214,21 @@
               "RelativeToolTip": "Bartender.Api\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-20T02:01:11.731Z"
+              "WhenOpened": "2026-02-20T02:01:11.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\appsettings.json",
               "RelativeDocumentMoniker": "Bartender.Api\\appsettings.json",
               "ToolTip": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\appsettings.json",
               "RelativeToolTip": "Bartender.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-20T02:01:00.136Z"
+              "WhenOpened": "2026-02-20T02:01:00.136Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -233,7 +240,8 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Inventory\\Commands\\EditInventory\\EditInventoryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:46:27.405Z"
+              "WhenOpened": "2026-02-20T01:46:27.405Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -245,7 +253,8 @@
               "RelativeToolTip": "Bartender.Api\\Controllers\\InventoryController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T02:26:13.937Z"
+              "WhenOpened": "2026-02-19T02:26:13.937Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -257,11 +266,12 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Recipes\\Commands\\DeleteRecipe\\DeleteRecipeHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:19:40.47Z"
+              "WhenOpened": "2026-02-20T01:19:40.47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "EditRecipeHandler.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Services\\Handlers\\Recipes\\Commands\\EditRecipe\\EditRecipeHandler.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Services\\Handlers\\Recipes\\Commands\\EditRecipe\\EditRecipeHandler.cs",
@@ -274,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Lookup.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Services\\Handlers\\Methods\\Lookup.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Services\\Handlers\\Methods\\Lookup.cs",
@@ -282,7 +292,8 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Methods\\Lookup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T00:59:43.267Z"
+              "WhenOpened": "2026-02-20T00:59:43.267Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -294,7 +305,8 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Inventory\\Queries\\GetInventory\\GetInventoryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T01:41:48.764Z"
+              "WhenOpened": "2026-02-20T01:41:48.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -306,11 +318,12 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Recipes\\Queries\\GetRecipeByGuid\\GetRecipeByGuidHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T02:01:40.001Z"
+              "WhenOpened": "2026-02-19T02:01:40.001Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Bootstrapper.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Bootstrapper.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Bootstrapper.cs",
@@ -318,7 +331,8 @@
               "RelativeToolTip": "Bartender.Api\\Bootstrapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:54:48.742Z"
+              "WhenOpened": "2026-02-19T01:54:48.742Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -330,23 +344,25 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Contracts\\IBartenderContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:47:05.277Z"
+              "WhenOpened": "2026-02-19T01:47:05.277Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\Brandon\\AppData\\Roaming\\Microsoft\\UserSecrets\\e4ea3cd2-01ae-49c2-9b6d-788ae255db1f\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\Brandon\\AppData\\Roaming\\Microsoft\\UserSecrets\\e4ea3cd2-01ae-49c2-9b6d-788ae255db1f\\secrets.json",
               "ToolTip": "C:\\Users\\Brandon\\AppData\\Roaming\\Microsoft\\UserSecrets\\e4ea3cd2-01ae-49c2-9b6d-788ae255db1f\\secrets.json",
               "RelativeToolTip": "..\\..\\..\\Users\\Brandon\\AppData\\Roaming\\Microsoft\\UserSecrets\\e4ea3cd2-01ae-49c2-9b6d-788ae255db1f\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-19T01:34:04.352Z"
+              "WhenOpened": "2026-02-19T01:34:04.352Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "MappingExtensions.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Services\\Handlers\\Models\\Mapping\\MappingExtensions.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Services\\Handlers\\Models\\Mapping\\MappingExtensions.cs",
@@ -354,7 +370,8 @@
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Models\\Mapping\\MappingExtensions.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAQwBgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:27:34.635Z"
+              "WhenOpened": "2026-02-19T01:27:34.635Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -364,9 +381,10 @@
               "RelativeDocumentMoniker": "Bartender.Api\\Domain\\BartenderContext.cs",
               "ToolTip": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Domain\\BartenderContext.cs",
               "RelativeToolTip": "Bartender.Api\\Domain\\BartenderContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:20:28.772Z"
+              "WhenOpened": "2026-02-19T01:20:28.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -378,7 +396,8 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Configurations\\InventoryItemConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:18:47.559Z"
+              "WhenOpened": "2026-02-19T01:18:47.559Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -390,7 +409,8 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Configurations\\RecipeStepConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:18:25.749Z"
+              "WhenOpened": "2026-02-19T01:18:25.749Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -402,7 +422,8 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Configurations\\RecipeIngredientConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:17:32.193Z"
+              "WhenOpened": "2026-02-19T01:17:32.193Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -414,7 +435,8 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Configurations\\RecipeCategoryConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:17:12.565Z"
+              "WhenOpened": "2026-02-19T01:17:12.565Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -426,11 +448,12 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Configurations\\RecipeConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:16:50.219Z"
+              "WhenOpened": "2026-02-19T01:16:50.219Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "InventoryItem.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Domain\\Models\\InventoryItem.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Domain\\Models\\InventoryItem.cs",
@@ -438,11 +461,12 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Models\\InventoryItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:15:40.378Z"
+              "WhenOpened": "2026-02-19T01:15:40.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "RecipeStep.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Domain\\Models\\RecipeStep.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Domain\\Models\\RecipeStep.cs",
@@ -450,7 +474,8 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Models\\RecipeStep.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:14:48.958Z"
+              "WhenOpened": "2026-02-19T01:14:48.958Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -460,9 +485,10 @@
               "RelativeDocumentMoniker": "Bartender.Api\\Domain\\Models\\RecipeIngredient.cs",
               "ToolTip": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Domain\\Models\\RecipeIngredient.cs",
               "RelativeToolTip": "Bartender.Api\\Domain\\Models\\RecipeIngredient.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCEAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCEAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:14:16.02Z"
+              "WhenOpened": "2026-02-19T01:14:16.02Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -474,11 +500,12 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Models\\RecipeCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:13:16.504Z"
+              "WhenOpened": "2026-02-19T01:13:16.504Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Domain\\Models\\Recipe.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Domain\\Models\\Recipe.cs",
@@ -486,19 +513,21 @@
               "RelativeToolTip": "Bartender.Api\\Domain\\Models\\Recipe.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAmwAQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:11:46.087Z"
+              "WhenOpened": "2026-02-19T01:11:46.087Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "GetRecipesHandler.cs",
               "DocumentMoniker": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Services\\Handlers\\Recipes\\Queries\\GetRecipes\\GetRecipesHandler.cs",
               "RelativeDocumentMoniker": "Bartender.Api\\Services\\Handlers\\Recipes\\Queries\\GetRecipes\\GetRecipesHandler.cs",
               "ToolTip": "C:\\repos\\Bartender-App\\Bartender.Api\\Bartender.Api\\Services\\Handlers\\Recipes\\Queries\\GetRecipes\\GetRecipesHandler.cs",
               "RelativeToolTip": "Bartender.Api\\Services\\Handlers\\Recipes\\Queries\\GetRecipes\\GetRecipesHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T01:44:19.887Z"
+              "WhenOpened": "2026-02-19T01:44:19.887Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: ./Bartender.Api
+    container_name: bartender-api
+    restart: unless-stopped
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      # Example connection string if you add a db container:
+      Default: "Data Source=192.168.0.25;database=bartender;User ID=mssql-ct-admin;password=Cdp!788788;TrustServerCertificate=True;"
+    networks:
+      - appnet
+
+  web:
+    build:
+      context: ./bartender-client
+    container_name: bartender-client-web
+    restart: unless-stopped
+    ports:
+      - "8088:80"   # hostPort:containerPort
+    depends_on:
+      - api
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge

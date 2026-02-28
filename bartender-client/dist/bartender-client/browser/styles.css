@@ -1,0 +1,22 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap";
+
+/* src/styles.scss */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: "raleway";
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  background: #0b0e14;
+  color: #e9eefc;
+}
+button {
+  cursor: pointer;
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles.css.map */
