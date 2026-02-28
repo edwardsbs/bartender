@@ -37,6 +37,7 @@ builder.Services.AddCors(opt =>
             .WithOrigins(
                 "http://localhost:4200",
                 "http://localhost:8088",
+                "http://192.168.0.64:8088",
                 "http://localhost:5173" // if you ever use Vite or something
             )
             .AllowAnyHeader()
