@@ -9,7 +9,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       # Example connection string if you add a db container:
-      Default: "Data Source=192.168.0.25;database=bartender;User ID=mssql-ct-admin;password=Cdp!788788;TrustServerCertificate=True;"
+      Default: ${ConnectionStrings__Default}
     networks:
       - appnet
 
