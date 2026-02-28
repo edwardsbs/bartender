@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DisplayUnitMode, normalizeIngredientKey, formatAmount, isVolumeUnit, toOz, fromOz, shouldSuggestBigConversion } from '../../core/data-access/models/units';
 // import { appStore } from '../../core/data-access/store/store';
@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./recipe-detail.component.scss'],
   imports: [CommonModule, RouterLink]
 })
-export class RecipeDetailComponent {
+export class RecipeDetailComponent implements OnInit {
 
   scale = signal(1);
   unitMode = signal<DisplayUnitMode>('oz');
@@ -21,12 +21,20 @@ export class RecipeDetailComponent {
 
   appStore = inject(AppStore)
 
+  navOpen = signal(false); // default collapsed for small screens
+
   private id = computed(() => this.route.snapshot.paramMap.get('id') ?? '');
   recipe = computed(() => this.appStore.recipes().find(r => r.id === this.id()) ?? null);
 
   haveSet = computed(() => new Set(this.appStore.inventory().filter(i => i.have).map(i => i.key)));
 
   constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) {}
+
+  ngOnInit() {
+    if (window.matchMedia('(min-width: 1100px)').matches) {
+      this.navOpen.set(true);
+    }
+  }
 
   inc() { this.scale.update(v => Math.min(64, v + 1)); }
   dec() { this.scale.update(v => Math.max(1, v - 1)); }
