@@ -1,0 +1,47 @@
+<div class="page">
+    <header class="top">
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Search recipes..."
+          [value]="query()"
+          (input)="query.set(($any($event.target).value))"
+        />
+        <a class="new" routerLink="/recipes/new">＋ New</a>
+      </div>
+
+      <div class="chips">
+        @for (c of allCategoryChips(); track c) {
+          <button class="chip" [class.on]="category()===c" (click)="toggleCategory(c)">
+            {{c}}
+          </button>
+        }
+        <button class="chip subtle" [class.on]="makeableOnly()" (click)="makeableOnly.set(!makeableOnly())">
+          Makeable
+        </button>
+      </div>
+    </header>
+
+    <section class="grid">
+      @for (r of filtered(); track r.id) {
+        <a class="card" [routerLink]="['/recipes', r.id]">
+          <div class="thumb" [style.backgroundImage]="'url(' + (r.imageUrl ?? '') + ')'"></div>
+          <div class="meta">
+            <div class="name">{{r.name}}</div>
+            <div class="sub">
+              <span class="pill">{{r.baseSpirit ?? 'No spirit'}}</span>
+              <span class="dot">•</span>
+              <span class="cats">{{r.categories.join(' • ')}}</span>
+            </div>
+            <div class="flags">
+              @if (isMakeable(r)) {
+                <span class="flag ok">Makeable</span>
+              } @else {
+                <span class="flag meh">Needs stuff</span>
+              }
+            </div>
+          </div>
+        </a>
+      }
+    </section>
+  </div>

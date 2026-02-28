@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* { box-sizing: border-box; }
+/* Apply font to the whole app */
+html, body {
+    height: 100%;
+  font-family: 'raleway';
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  background: #0b0e14;
+  color: #e9eefc;
+}
+
+button { cursor: pointer; }

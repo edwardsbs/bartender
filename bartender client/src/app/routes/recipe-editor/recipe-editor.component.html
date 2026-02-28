@@ -1,0 +1,96 @@
+<div class="page">
+    <header class="top">
+      <div class="left">
+        <a class="back" (click)="goBack()">←</a>
+        @if (originalRecipeId()) {
+          <div class="title">Edit Recipe</div>
+        } @else {
+          <div class="title">New Recipe</div>
+        }
+      </div>
+      <button class="save" (click)="save()" [disabled]="!name().trim()">Save</button>
+    </header>
+
+    <section class="card">
+      <label>Name</label>
+      <input [value]="name()" (input)="name.set($any($event.target).value)" placeholder="e.g., Espresso Martini"/>
+      <label>Description</label>
+      <textarea [value]="description()" (input)="description.set($any($event.target).value)" placeholder="Short description (optional)"></textarea>
+
+      <div class="row">
+        <div>
+          <label>Categories (comma)</label>
+          <input [value]="categoriesText()" (input)="categoriesText.set($any($event.target).value)" placeholder="Classic, Sour"/>
+        </div>
+        <div>
+          <label>Base spirit</label>
+          <input [value]="baseSpirit()" (input)="baseSpirit.set($any($event.target).value)" placeholder="Gin, Tequila, Rum..."/>
+        </div>
+        <div>
+          <label>Image link (optional)</label>
+          <input
+            [value]="imageUrl()"
+            (input)="imageUrl.set($any($event.target).value)"
+            placeholder="https://youtu.be/VIDEOID or https://www.youtube.com/watch?v=VIDEOID"
+          />
+        </div>
+        <div>
+          <label>YouTube link (optional)</label>
+          <input
+            [value]="youtubeUrl()"
+            (input)="youtubeUrl.set($any($event.target).value)"
+            placeholder="https://youtu.be/VIDEOID or https://www.youtube.com/watch?v=VIDEOID"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="two">
+        <div>
+          <label>Ingredients (paste)</label>
+          <textarea class="big" 
+            [value]="ingredientsText()" 
+            (input)="ingredientsText.set($any($event.target).value)"
+            placeholder="2 oz tequila&#10;1 oz lime juice (fresh)&#10;0.75 oz triple sec"></textarea>
+        </div>
+        <div>
+          <label>Steps (paste)</label>
+          <textarea class="big" 
+            [value]="stepsText()" 
+            (input)="stepsText.set($any($event.target).value)"
+            placeholder="Shake with ice&#10;Strain into glass&#10;Garnish and serve"></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" (click)="preview()">Preview parse</button>
+        <button class="btn subtle" (click)="fillExample()">Fill example</button>
+      </div>
+    </section>
+
+    @if (parsedIngredients().length || parsedSteps().length) {
+      <section class="card">
+        <div class="h">Parsed Ingredients (editable)</div>
+        <div class="table">
+          <div class="thead">
+            <div>Amount</div><div>Unit</div><div>Item</div><div>Optional</div><div>Original</div>
+          </div>
+          @for (ing of parsedIngredients(); track ing.id; let i = $index) {
+            <div class="trow">
+              <input [value]="ing.amount ?? ''" (input)="setIng(i, 'amount', $any($event.target).value)" />
+              <input [value]="ing.unit" (input)="setIng(i, 'unit', $any($event.target).value)" />
+              <input [value]="ing.item" (input)="setIng(i, 'item', $any($event.target).value)" />
+              <input type="checkbox" [checked]="!!ing.isOptional" (change)="setIng(i, 'isOptional', $any($event.target).checked)" />
+              <div class="orig">{{ing.originalLine}}</div>
+            </div>
+          }
+        </div>
+
+        <div class="h" style="margin-top:14px;">Parsed Steps</div>
+        <ol class="steps">
+          @for (s of parsedSteps(); track s.id) { <li>{{s.text}}</li> }
+        </ol>
+      </section>
+    }
+  </div>

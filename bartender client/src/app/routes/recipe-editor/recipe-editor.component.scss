@@ -1,0 +1,97 @@
+.page { max-width: 980px; margin: 0 auto; }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(11,14,20,0.88);
+  backdrop-filter: blur(10px);
+  padding: 10px 0 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.left { display: flex; gap: 10px; align-items: center; }
+.back { cursor: pointer; opacity: 0.9; }
+.title { font-size: 18px; font-weight: 900; }
+
+.save {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 0;
+  background: #e9eefc;
+  color: #0b0e14;
+  font-weight: 900;
+}
+.save:disabled { opacity: 0.5; }
+
+.card {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+label { display: block; font-size: 12px; opacity: 0.75; margin-top: 10px; }
+input, textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  outline: none;
+}
+textarea.big { min-height: 180px; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  font-weight: 800;
+}
+.btn.subtle { opacity: 0.85; }
+
+.h { font-weight: 900; margin-bottom: 8px; }
+
+.table { display: grid; gap: 8px; }
+.thead, .trow {
+  display: grid;
+  grid-template-columns: 80px 80px 1fr 80px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+.thead { opacity: 0.7; font-size: 12px; }
+.orig { opacity: 0.75; font-size: 12px; }
+
+.steps { margin: 8px 0 0; padding-left: 18px; }
+
+@media (max-width: 900px) {
+  .two { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+  .thead, .trow { grid-template-columns: 70px 70px 1fr 70px 1fr; }
+}

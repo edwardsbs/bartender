@@ -1,0 +1,42 @@
+.page { max-width: 980px; margin: 0 auto; }
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(11,14,20,0.88);
+  backdrop-filter: blur(10px);
+  padding: 10px 0 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.title { font-size: 20px; font-weight: 900; margin-bottom: 10px; }
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  outline: none;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+}
+
+.chip {
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  color: inherit;
+}
+.chip.on {
+  background: rgba(120,255,170,0.10);
+  border-color: rgba(120,255,170,0.22);
+}

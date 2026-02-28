@@ -1,0 +1,111 @@
+.page { max-width: 1100px; margin: 0 auto; }
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(11,14,20,0.85);
+  backdrop-filter: blur(10px);
+  padding: 10px 0 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  outline: none;
+}
+
+.new {
+  padding: 12px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #0b0e14;
+  background: #e9eefc;
+  font-weight: 700;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+.chip {
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  color: inherit;
+}
+
+.chip.on {
+  background: rgba(233,238,252,0.18);
+  border-color: rgba(233,238,252,0.35);
+}
+
+.chip.subtle { opacity: 0.9; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 14px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.thumb {
+  width: 78px;
+  height: 78px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255,255,255,0.06);
+}
+
+.name { font-weight: 800; }
+.sub { opacity: 0.9; font-size: 13px; margin-top: 3px; }
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+}
+.dot { margin: 0 6px; opacity: 0.6; }
+.flags { margin-top: 8px; }
+.flag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.flag.ok { background: rgba(120,255,170,0.08); }
+.flag.meh { background: rgba(255,220,120,0.06); opacity: 0.85; }
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+}

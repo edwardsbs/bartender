@@ -1,0 +1,30 @@
+<div class="shell">
+    <aside class="rail">
+      <div class="brand">
+        <div class="logo">🍸</div>
+        <div class="title">Bartender</div>
+      </div>
+
+      <nav class="nav">
+        @for (item of nav(); track item.path) {
+          <a [routerLink]="item.path" routerLinkActive="active" class="nav-item">
+            <span class="icon">{{item.icon}}</span>
+            <span class="label">{{item.label}}</span>
+          </a>
+        }
+      </nav>
+    </aside>
+
+    <main class="content">
+      <router-outlet />
+    </main>
+
+    <nav class="bottom">
+      @for (item of nav(); track item.path) {
+        <a [routerLink]="item.path" routerLinkActive="active" class="bottom-item">
+          <div class="icon">{{item.icon}}</div>
+          <div class="label">{{item.label}}</div>
+        </a>
+      }
+    </nav>
+  </div>

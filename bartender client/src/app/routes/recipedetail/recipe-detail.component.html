@@ -1,0 +1,264 @@
+@if (recipe(); as r) {
+    <!-- <div class="page"> -->
+      <!-- <header class="hero">
+        <a class="back" routerLink="/recipes">← Recipes</a>
+        <a class="chip space" [routerLink]="['/recipes', r.id, 'edit']">Edit</a>
+        <div class="title">{{r.name}}</div>
+        <div class="sub">{{r.description}}</div>
+
+        @if (r.imageUrl) {
+          <div class="image" [style.backgroundImage]="'url(' + r.imageUrl + ')'"></div>
+        }
+
+        <div class="facts">
+          <div class="fact"><span class="k">Yield</span><span class="v">{{r.yieldText ?? '—'}}</span></div>
+          <div class="fact"><span class="k">Glass</span><span class="v">{{r.glass ?? '—'}}</span></div>
+          <div class="fact"><span class="k">Spirit</span><span class="v">{{r.baseSpirit ?? '—'}}</span></div>
+        </div>
+      </header> -->
+
+    <div class="recipePage">
+      <div class="recipeGrid">
+        <!-- LEFT: header + hero + meta -->
+        <aside class="leftPane">
+          <!-- your existing top nav + title + description -->
+          <div class="leftTop">
+            <!-- back + edit + title stuff -->
+            <a class="back" routerLink="/recipes">← Recipes</a>
+            <a class="chip space" [routerLink]="['/recipes', r.id, 'edit']">Edit</a>
+            <div class="title">{{r.name}}</div>
+            <div class="sub">{{r.description}}</div>
+          </div>
+
+          <div class="leftHero">
+            <!-- your hero image card -->
+            @if (r.imageUrl) {
+              <div class="image" [style.backgroundImage]="'url(' + r.imageUrl + ')'"></div>
+            }
+          </div>
+
+          <div class="leftHero">
+            <!-- yield/glass/spirit cards -->
+            <div class="facts">
+              <div class="fact"><span class="k">Yield</span><span class="v">{{r.yieldText ?? '—'}}</span></div>
+              <div class="fact"><span class="k">Glass</span><span class="v">{{r.glass ?? '—'}}</span></div>
+              <div class="fact"><span class="k">Spirit</span><span class="v">{{r.baseSpirit ?? '—'}}</span></div>
+            </div>
+          </div>
+
+          <div class="leftMeta">
+            <!-- your scale controls + unit toggle -->
+             <div class="scale">
+              <button (click)="dec()">−</button>
+              <div class="scaleText">{{scale()}}x</div>
+              <button (click)="inc()">＋</button>
+              <div class="quick">
+                @for (x of [1,2,4,8,12]; track x) {
+                  <button class="chip" [class.on]="scale()===x" (click)="scale.set(x)">{{x}}x</button>
+                }
+              </div>
+            </div>
+
+            <div class="unitMode">
+              <button class="seg" [class.on]="unitMode()==='oz'" (click)="unitMode.set('oz')">Oz</button>
+              <button class="seg" [class.on]="unitMode()==='ml'" (click)="unitMode.set('ml')">mL</button>
+              <button class="seg" [class.on]="unitMode()==='cups'" (click)="unitMode.set('cups')">Cups</button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT: ingredients + directions + video -->
+        <section class="rightPane">
+          <div class="rightHeader">
+            <!-- your scale controls + unit toggle -->
+             <!-- <div class="scale">
+              <button (click)="dec()">−</button>
+              <div class="scaleText">{{scale()}}x</div>
+              <button (click)="inc()">＋</button>
+              <div class="quick">
+                @for (x of [1,2,4,8,12]; track x) {
+                  <button class="chip" [class.on]="scale()===x" (click)="scale.set(x)">{{x}}x</button>
+                }
+              </div>
+            </div>
+
+            <div class="unitMode">
+              <button class="seg" [class.on]="unitMode()==='oz'" (click)="unitMode.set('oz')">Oz</button>
+              <button class="seg" [class.on]="unitMode()==='ml'" (click)="unitMode.set('ml')">mL</button>
+              <button class="seg" [class.on]="unitMode()==='cups'" (click)="unitMode.set('cups')">Cups</button>
+            </div> -->
+          </div>
+
+          <div class="rightBody">
+            <div class="ingredientsBlock">
+              <!-- ingredients list -->
+               <div class="hrow">
+                <div class="h">Ingredients</div>
+                <div class="hint">Tap to check off (local only for now)</div>
+              </div>
+
+              <div class="list">
+                @for (ingredient of r.ingredients; track ingredient.id) {
+                  <div class="row" [class.optional]="ingredient.isOptional">
+                    <button class="check" (click)="toggleCheck(ingredient.id)">{{ checked().has(ingredient.id) ? '✓' : '' }}</button>
+
+                    <div class="line">
+                      <div class="main">
+                        <span class="amt" *ngIf="scaledText(ingredient) as st">{{st}}</span>
+                        <span class="item">{{ingredient.item}}</span>
+                        @if (ingredient.notes) { <span class="notes">({{ingredient.notes}})</span> }
+                      </div>
+
+                      @if (suggestConvert(ingredient)) {
+                        <div class="suggest">Large batch: consider cups</div>
+                      }
+
+                      @if (ingredient.isOptional) {
+                        <div class="tag">optional</div>
+                      }
+                    </div>
+
+                    <div class="have" [class.on]="haveIngredient(ingredient.item)">
+                      {{ haveIngredient(ingredient.item) ? 'Have' : 'Missing' }}
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+
+            <div class="stepsBlock">
+              <!-- directions / steps -->
+               <div class="h">Directions</div>
+                <ol class="steps">
+                  @for (s of r.steps; track s.id) {
+                    <li>{{s.text}}</li>
+                  }
+                </ol>
+            </div>
+
+            <div class="videoBlock">
+              <!-- youtube embed -->
+                @if (safeVideoUrl(); as vid) {
+                  <section class="videoCard">
+                    <div class="videoHeader">
+                      <div class="h">Video</div>
+                      <button class="chip" (click)="showVideo.set(!showVideo())">
+                        {{ showVideo() ? 'Hide' : 'Show' }}
+                      </button>
+                    </div>
+
+                    @if (showVideo()) {
+                      <div class="videoWrap">
+                        <iframe
+                          [src]="vid"
+                          title="Recipe video"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen>
+                        </iframe>
+                      </div>
+                    }
+                  </section>
+                }
+
+              
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+      <!-- <section class="controls">
+        <div class="scale">
+          <button (click)="dec()">−</button>
+          <div class="scaleText">{{scale()}}x</div>
+          <button (click)="inc()">＋</button>
+          <div class="quick">
+            @for (x of [1,2,4,8,12]; track x) {
+              <button class="chip" [class.on]="scale()===x" (click)="scale.set(x)">{{x}}x</button>
+            }
+          </div>
+        </div>
+
+        <div class="unitMode">
+          <button class="seg" [class.on]="unitMode()==='oz'" (click)="unitMode.set('oz')">Oz</button>
+          <button class="seg" [class.on]="unitMode()==='ml'" (click)="unitMode.set('ml')">mL</button>
+          <button class="seg" [class.on]="unitMode()==='cups'" (click)="unitMode.set('cups')">Cups</button>
+        </div>
+      </section> -->
+
+      <!-- <section class="section">
+        <div class="hrow">
+          <div class="h">Ingredients</div>
+          <div class="hint">Tap to check off (local only for now)</div>
+        </div>
+
+        <div class="list">
+          @for (ingredient of r.ingredients; track ingredient.id) {
+            <div class="row" [class.optional]="ingredient.isOptional">
+              <button class="check" (click)="toggleCheck(ingredient.id)">{{ checked().has(ingredient.id) ? '✓' : '' }}</button>
+
+              <div class="line">
+                <div class="main">
+                  <span class="amt" *ngIf="scaledText(ingredient) as st">{{st}}</span>
+                  <span class="item">{{ingredient.item}}</span>
+                  @if (ingredient.notes) { <span class="notes">({{ingredient.notes}})</span> }
+                </div>
+
+                @if (suggestConvert(ingredient)) {
+                  <div class="suggest">Large batch: consider cups</div>
+                }
+
+                @if (ingredient.isOptional) {
+                  <div class="tag">optional</div>
+                }
+              </div>
+
+              <div class="have" [class.on]="haveIngredient(ingredient.item)">
+                {{ haveIngredient(ingredient.item) ? 'Have' : 'Missing' }}
+              </div>
+            </div>
+          }
+        </div>
+      </section> -->
+
+      <!-- <section class="section">
+        <div class="h">Directions</div>
+        <ol class="steps">
+          @for (s of r.steps; track s.id) {
+            <li>{{s.text}}</li>
+          }
+        </ol>
+      </section> -->
+    <!-- </div> -->
+
+    <!-- @if (safeVideoUrl(); as vid) {
+      <section class="videoCard">
+        <div class="videoHeader">
+          <div class="h">Video</div>
+          <button class="chip" (click)="showVideo.set(!showVideo())">
+            {{ showVideo() ? 'Hide' : 'Show' }}
+          </button>
+        </div>
+
+        @if (showVideo()) {
+          <div class="videoWrap">
+            <iframe
+              [src]="vid"
+              title="Recipe video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        }
+      </section>
+    }-->
+
+  } @else {
+    <div class="page">
+      <a routerLink="/recipes" class="back">← Recipes</a>
+      <p>Recipe not found. Humans have done it again.</p>
+    </div>
+  } 

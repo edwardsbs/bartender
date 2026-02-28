@@ -1,0 +1,25 @@
+<div class="page">
+    <header class="top">
+      <div class="title">Makeable</div>
+      <div class="toggles">
+        <button class="seg" [class.on]="strict()" (click)="strict.set(true)">Strict</button>
+        <button class="seg" [class.on]="!strict()" (click)="strict.set(false)">Near-miss</button>
+      </div>
+      <div class="sub">Based on your Inventory toggles.</div>
+    </header>
+
+    <section class="list">
+      @for (r of ranked(); track r.id) {
+        <a class="row" [routerLink]="['/recipes', r.id]">
+          <div class="name">{{r.name}}</div>
+          <div class="meta">
+            @if (r.missing.length === 0) {
+              <span class="ok">Makeable</span>
+            } @else {
+              <span class="miss">Missing: {{r.missing.slice(0,3).join(', ')}}{{ r.missing.length>3 ? '…' : '' }}</span>
+            }
+          </div>
+        </a>
+      }
+    </section>
+  </div>

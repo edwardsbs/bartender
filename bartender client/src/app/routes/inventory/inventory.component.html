@@ -1,0 +1,14 @@
+<div class="page">
+    <header class="top">
+      <div class="title">Inventory</div>
+      <input placeholder="Search ingredients..." [value]="q()" (input)="q.set($any($event.target).value)" />
+    </header>
+
+    <section class="chips">
+      @for (i of filtered(); track i.key) {
+        <button class="chip" [class.on]="i.have" (click)="toggle(i.key)">
+          {{i.have ? '✓' : ''}} {{i.name}}
+        </button>
+      }
+    </section>
+  </div>
