@@ -61,7 +61,8 @@ export class BartenderHttpService {
             item: i.item,
             notes: i.notes,
             isOptional: !!i.isOptional,
-            measurementType: i.measurementType
+            measurementType: i.measurementType,
+            sortOrder: i.sortOrder,
           })),
           steps: recipe.steps.map(s => ({
             id: this.isGuid(s.id) ? s.id : null,

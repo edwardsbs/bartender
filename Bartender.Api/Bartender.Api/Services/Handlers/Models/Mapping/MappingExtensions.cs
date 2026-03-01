@@ -30,8 +30,8 @@ public static class MappingExtensions
             r.CreatedAtUtc,
             r.UpdatedAtUtc,
             r.Ingredients
-                .OrderBy(i => i.Id) // not meaningful; frontend order comes from input
-                .Select(i => new IngredientLineDto(i.Id, i.OriginalLine, i.Amount, i.Unit, i.Item, i.Notes, i.IsOptional, i.MeasurementType))
+                .OrderBy(i => i.SortOrder) // not meaningful; frontend order comes from input
+                .Select(i => new IngredientLineDto(i.Id, i.OriginalLine, i.Amount, i.Unit, i.Item, i.Notes, i.IsOptional, i.MeasurementType, i.SortOrder))
                 .ToArray(),
             r.Steps
                 .OrderBy(s => s.StepNumber)

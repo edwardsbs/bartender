@@ -84,7 +84,7 @@ public class AddRecipeHandler : IRequestHandler<AddRecipeRequest, RecipeDto?>
         _context.Recipes.Add(recipe);
 
         // Inventory: ensure ingredient keys exist (best effort)
-        foreach (var ing in recipe.Ingredients)
+        foreach (var ing in recipe.Ingredients.OrderBy(i => i.SortOrder))
         {
             var key = Normalizing.NormalizeKey(ing.Item);
             if (string.IsNullOrWhiteSpace(key)) continue;

@@ -39,10 +39,10 @@ export function parseIngredientsBlock(text: string): IngredientLine[] {
     .map(s => s.trim())
     .filter(Boolean);
 
-  return lines.map((line) => parseIngredientLine(line));
+  return lines.map((line) => parseIngredientLine(line, lines.indexOf(line)));
 }
 
-export function parseIngredientLine(line: string): IngredientLine {
+export function parseIngredientLine(line: string, sortOrder: number): IngredientLine {
   const originalLine = line;
 
   // naive token split
@@ -114,10 +114,11 @@ export function parseIngredientLine(line: string): IngredientLine {
     notes: notes || (isSpecial ? 'to taste' : undefined),
     isOptional,
     measurementType,
+    sortOrder,
   };
 }
 
-export function parseStepsBlock(text: string): { id: string; text: string }[] {
+export function parseStepsBlock(text: string): { id: string; text: string, stepNumber: number }[] {
   const lines = text
     .split('\n')
     .map(s => s.trim())
@@ -127,5 +128,6 @@ export function parseStepsBlock(text: string): { id: string; text: string }[] {
   return lines.map((l) => ({
     id: uid(),
     text: l.replace(/^(\d+[\).\s]+|\-\s+|\*\s+)/, '').trim(),
+    stepNumber: lines.indexOf(l),
   }));
 }

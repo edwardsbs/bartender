@@ -31,5 +31,7 @@ public class RecipeIngredient
     [MaxLength(20)]
     public string MeasurementType { get; set; } = "volume"; // volume|count|special
 
+    public int SortOrder { get; set; } = 0;
+
     public Recipe Recipe { get; set; } = default!;
 }

@@ -28,9 +28,9 @@ const seedRecipes: Recipe[] = [
     imageUrl: 'https://plus.unsplash.com/premium_photo-1671647122992-5de89811f4c8?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     youtubeUrl: 'https://youtu.be/Xhpx-vbzRpQ?si=Y5zPS4WR2_eg6pdN',
     ingredients: [
-      { id: uid(), originalLine: '2 oz whiskey', amount: 2, unit: 'oz', item: 'whiskey', measurementType: 'volume' },
-      { id: uid(), originalLine: '0.25 oz simple syrup (optional)', amount: 0.25, unit: 'oz', item: 'simple syrup', isOptional: true, measurementType: 'volume' },
-      { id: uid(), originalLine: 'Bitters', amount: null, unit: 'dash', item: 'bitters', isOptional: true, measurementType: 'special' },
+      { id: uid(), originalLine: '2 oz whiskey', amount: 2, unit: 'oz', item: 'whiskey', measurementType: 'volume', sortOrder: 0  },
+      { id: uid(), originalLine: '0.25 oz simple syrup (optional)', amount: 0.25, unit: 'oz', item: 'simple syrup', isOptional: true, measurementType: 'volume', sortOrder: 1 },
+      { id: uid(), originalLine: 'Bitters', amount: null, unit: 'dash', item: 'bitters', isOptional: true, measurementType: 'special', sortOrder: 2 },
     ],
     steps: [
       { id: uid(), text: 'Stir with ice until very cold.' },
@@ -53,11 +53,11 @@ const seedRecipes: Recipe[] = [
     imageUrl: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=60',
     youtubeUrl: 'https://youtu.be/vLMiQozMcUo?si=O3KtgfywNkfmnyks',
     ingredients: [
-      { id: uid(), originalLine: '2 oz tequila', amount: 2, unit: 'oz', item: 'tequila', measurementType: 'volume' },
-      { id: uid(), originalLine: '1 oz lime juice (fresh)', amount: 1, unit: 'oz', item: 'lime juice', notes: 'fresh', measurementType: 'volume' },
-      { id: uid(), originalLine: '0.75 oz triple sec', amount: 0.75, unit: 'oz', item: 'triple sec', measurementType: 'volume' },
-      { id: uid(), originalLine: '0.25 oz agave syrup (optional)', amount: 0.25, unit: 'oz', item: 'agave syrup', isOptional: true, measurementType: 'volume' },
-      { id: uid(), originalLine: 'Salt rim (optional)', amount: null, unit: '', item: 'salt', isOptional: true, measurementType: 'special' },
+      { id: uid(), originalLine: '2 oz tequila', amount: 2, unit: 'oz', item: 'tequila', measurementType: 'volume', sortOrder: 0  },
+      { id: uid(), originalLine: '1 oz lime juice (fresh)', amount: 1, unit: 'oz', item: 'lime juice', notes: 'fresh', measurementType: 'volume', sortOrder: 1 },
+      { id: uid(), originalLine: '0.75 oz triple sec', amount: 0.75, unit: 'oz', item: 'triple sec', measurementType: 'volume', sortOrder: 2 },
+      { id: uid(), originalLine: '0.25 oz agave syrup (optional)', amount: 0.25, unit: 'oz', item: 'agave syrup', isOptional: true, measurementType: 'volume', sortOrder: 3 },
+      { id: uid(), originalLine: 'Salt rim (optional)', amount: null, unit: '', item: 'salt', isOptional: true, measurementType: 'special', sortOrder: 4 },
     ],
     steps: [
       { id: uid(), text: 'Shake with ice until very cold.' },
@@ -80,9 +80,9 @@ const seedRecipes: Recipe[] = [
     imageUrl: 'https://plus.unsplash.com/premium_photo-1668771899398-1cdd763f745e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     youtubeUrl: 'https://youtu.be/Og7wTN5gKd8?si=qWfJ2eTCDrbjPG_S',
     ingredients: [
-      { id: uid(), originalLine: '2 oz gin', amount: 2, unit: 'oz', item: 'gin', measurementType: 'volume' },
-      { id: uid(), originalLine: '4 oz tonic water', amount: 4, unit: 'oz', item: 'tonic water', measurementType: 'volume' },
-      { id: uid(), originalLine: 'Lime wedge (optional)', amount: null, unit: '', item: 'lime', isOptional: true, measurementType: 'count' },
+      { id: uid(), originalLine: '2 oz gin', amount: 2, unit: 'oz', item: 'gin', measurementType: 'volume', sortOrder: 0 },
+      { id: uid(), originalLine: '4 oz tonic water', amount: 4, unit: 'oz', item: 'tonic water', measurementType: 'volume', sortOrder: 1 },
+      { id: uid(), originalLine: 'Lime wedge (optional)', amount: null, unit: '', item: 'lime', isOptional: true, measurementType: 'count', sortOrder: 2 },
     ],
     steps: [
       { id: uid(), text: 'Fill glass with ice.' },

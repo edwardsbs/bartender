@@ -30,7 +30,8 @@ public record IngredientLineDto(
     string Item,
     string? Notes,
     bool IsOptional,
-    string MeasurementType
+    string MeasurementType,
+    int SortOrder
 );
 
 public record RecipeStepDto(
@@ -67,7 +68,8 @@ public record IngredientLineUpsert(
     string Item,
     string? Notes,
     bool IsOptional,
-    string MeasurementType
+    string MeasurementType,
+    int SortOrder
 );
 
 public record StepUpsert(

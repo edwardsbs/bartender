@@ -21,6 +21,7 @@ export interface IngredientLine {
   isOptional?: boolean;
 
   measurementType: MeasurementType;
+  sortOrder: number;
 }
 
 export interface Recipe {

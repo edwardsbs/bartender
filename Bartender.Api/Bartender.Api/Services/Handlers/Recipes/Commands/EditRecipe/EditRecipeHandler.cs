@@ -42,12 +42,14 @@ public class EditRecipeHandler : IRequestHandler<EditRecipeRequest, RecipeDto?>
         recipe.ImageAttributionUrl = string.IsNullOrWhiteSpace(request.dto.ImageAttributionUrl) ? null : request.dto.ImageAttributionUrl.Trim();
         recipe.UpdatedAtUtc = now;
 
-        // Replace categories/ingredients/steps (simple + reliable for now)
-        _context.RecipeCategories.RemoveRange(recipe.Categories);
-        _context.RecipeIngredients.RemoveRange(recipe.Ingredients);
-        _context.RecipeSteps.RemoveRange(recipe.Steps);
+        _context.Recipes.Update(recipe);
 
-        await _context.SaveChangesAsync(token);
+        // Replace categories/ingredients/steps (simple + reliable for now)
+        //_context.RecipeCategories.RemoveRange(recipe.Categories);
+        //_context.RecipeIngredients.RemoveRange(recipe.Ingredients);
+        //_context.RecipeSteps.RemoveRange(recipe.Steps);        
+
+        //await _context.SaveChangesAsync(token);
 
         recipe.Categories = request.dto.Categories
             .Distinct(StringComparer.OrdinalIgnoreCase)
@@ -59,7 +61,7 @@ public class EditRecipeHandler : IRequestHandler<EditRecipeRequest, RecipeDto?>
         await _context.RecipeCategories.AddRangeAsync(recipe.Categories);
         //await _context.SaveChangesAsync(token);
 
-        recipe.Ingredients = request.dto.Ingredients.Select(ing => new RecipeIngredient
+        recipe.Ingredients = request.dto.Ingredients.OrderBy(i => i.SortOrder).Select(ing => new RecipeIngredient
         {
             Id = Guid.NewGuid(),
             RecipeId = recipe.Id,
@@ -70,9 +72,10 @@ public class EditRecipeHandler : IRequestHandler<EditRecipeRequest, RecipeDto?>
             Notes = string.IsNullOrWhiteSpace(ing.Notes) ? null : ing.Notes.Trim(),
             IsOptional = ing.IsOptional,
             MeasurementType = string.IsNullOrWhiteSpace(ing.MeasurementType) ? "volume" : ing.MeasurementType.Trim(),
+            SortOrder = ing.SortOrder,
         }).ToList();
 
-        await _context.RecipeIngredients.AddRangeAsync(recipe.Ingredients);
+        await _context.RecipeIngredients.AddRangeAsync(recipe.Ingredients.OrderBy(i => i.SortOrder).ToList());
         //await _context.SaveChangesAsync(token);
 
         recipe.Steps = request.dto.Steps
@@ -89,7 +92,7 @@ public class EditRecipeHandler : IRequestHandler<EditRecipeRequest, RecipeDto?>
         //await _context.SaveChangesAsync(token);
 
         // ensure inventory items exist
-        foreach (var ing in recipe.Ingredients)
+        foreach (var ing in recipe.Ingredients.OrderBy(i => i.SortOrder))
         {
             var key = Normalizing.NormalizeKey(ing.Item);
             if (string.IsNullOrWhiteSpace(key)) continue;
