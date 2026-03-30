@@ -17,7 +17,7 @@ export class RecipeDetailComponent {
   scale = signal(1);
   unitMode = signal<DisplayUnitMode>('oz');
   checked = signal(new Set<string>());
-  showVideo = signal(true);
+  showVideo = signal(false);
 
   private appStore = inject(AppStore);
   private route = inject(ActivatedRoute);

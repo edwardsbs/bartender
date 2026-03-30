@@ -50,12 +50,16 @@
       <!-- RIGHT: ingredients + directions + video -->
       <section class="rightPane">
 
-        <div class="rightBody">
+        <div class="rightBody" [class.video-active]="showVideo()">
 
           <div class="ingredientsBlock">
             <div class="hrow">
               <div class="h">Ingredients</div>
-              <div class="hint">Tap to check off</div>
+              @if (showVideo()) {
+                <button class="chip" (click)="showVideo.set(false)">← Recipe</button>
+              } @else {
+                <div class="hint">Tap to check off</div>
+              }
             </div>
             <div class="list">
               @for (ingredient of r.ingredients; track ingredient.id) {
