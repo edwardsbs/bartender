@@ -261,6 +261,129 @@
   height: 100%;
 }
 
+/* ─── Video-active mode ─────────────────────────────────────────────── *
+ * When the video is shown, ingredients collapse to a horizontal chip     *
+ * strip and directions are hidden so the video can fill the space.      *
+ * Clicking "← Recipe" in the ingredient header restores the full view. *
+ * ──────────────────────────────────────────────────────────────────── */
+.rightBody.video-active {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Ingredients: compact horizontal scrollable strip */
+.rightBody.video-active .ingredientsBlock {
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.rightBody.video-active .list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 6px;
+  margin-top: 6px;
+  padding-bottom: 6px; /* room for scrollbar */
+}
+
+.rightBody.video-active .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  padding: 8px 6px;
+  border-radius: 12px;
+  min-width: 72px;
+  width: 72px;
+  flex: 0 0 auto;
+  /* override the grid layout */
+  grid-template-columns: unset;
+}
+
+.rightBody.video-active .check {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.rightBody.video-active .line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rightBody.video-active .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightBody.video-active .amt {
+  font-size: 11px;
+  font-weight: 900;
+  margin-right: 0;
+}
+
+.rightBody.video-active .item {
+  font-size: 11px;
+  font-weight: 700;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 68px;
+  text-align: center;
+}
+
+/* Hide noisy detail in compact strip */
+.rightBody.video-active .notes,
+.rightBody.video-active .suggest,
+.rightBody.video-active .tag,
+.rightBody.video-active .have {
+  display: none;
+}
+
+/* Directions hidden — the video is the directions */
+.rightBody.video-active .stepsBlock {
+  display: none;
+}
+
+/* Video block: fills all remaining height */
+.rightBody.video-active .videoBlock {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightBody.video-active .videoCard {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightBody.video-active .videoHeader {
+  flex: 0 0 auto;
+}
+
+/* Replace the padding-top aspect-ratio trick with flex fill */
+.rightBody.video-active .videoWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding-top: 0;
+}
+
+.rightBody.video-active .videoWrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* ─── Tablet / kiosk: iPad landscape and similar ────────────────────── *
  * Shrinks font, left pane, and spacings so everything fits without      *
  * scrolling the overall page. Each section scrolls internally if needed.*
@@ -279,8 +402,7 @@
     padding: 8px;
   }
 
-  /* Right body becomes a fixed grid so sections share space evenly
-     and each can scroll independently — no whole-page scroll needed */
+  /* Right body: fixed grid so sections share space, each scrolling independently */
   .rightBody {
     overflow: hidden;
     display: grid;
@@ -292,6 +414,12 @@
   .stepsBlock {
     min-height: 0;
     overflow: auto;
+  }
+
+  /* In video-active mode, revert to flex so the strip + video layout works */
+  .rightBody.video-active {
+    display: flex;
+    grid-template-rows: unset;
   }
 
   /* Compress image */
