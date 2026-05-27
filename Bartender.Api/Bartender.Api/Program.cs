@@ -55,7 +55,7 @@ app.UseSwaggerUI();
 
 app.UseCors("dev");
 
-app.MapGet("/api/health", () => Results.Ok(new { ok = true, at = DateTime.UtcNow }));
+app.MapGet("/health", () => Results.Ok(new { ok = true, at = DateTime.UtcNow }));
 
 app.MapControllers();
 
