@@ -3,7 +3,7 @@ services:
     build:
       context: ./Bartender.Api
     container_name: bartender-api
-    restart: unless-stopped
+    restart: always
     ports:
       - "5000:8080"
     expose:
@@ -19,7 +19,7 @@ services:
   web:
     build:
       context: ./bartender-client
-    restart: unless-stopped
+    restart: always
     ports:
       - "8088:80"   # hostPort:containerPort
     depends_on:
