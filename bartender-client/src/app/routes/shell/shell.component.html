@@ -1,35 +1,5 @@
-<!-- <div class="shell">
-    <aside class="rail">
-      <div class="brand">
-        <div class="logo">🍸</div>
-        <div class="title">Bartender</div>
-      </div>
+<div class="shell" [class.nav-open]="navOpen()">
 
-      <nav class="nav">
-        @for (item of nav(); track item.path) {
-          <a [routerLink]="item.path" routerLinkActive="active" class="nav-item">
-            <span class="icon">{{item.icon}}</span>
-            <span class="label">{{item.label}}</span>
-          </a>
-        }
-      </nav>
-    </aside>
-
-    <main class="content">
-      <router-outlet />
-    </main>
-
-    <nav class="bottom">
-      @for (item of nav(); track item.path) {
-        <a [routerLink]="item.path" routerLinkActive="active" class="bottom-item">
-          <div class="icon">{{item.icon}}</div>
-          <div class="label">{{item.label}}</div>
-        </a>
-      }
-    </nav>
-  </div> -->
-
-  <div class="shell" [class.nav-open]="navOpen()">
   <!-- Sidebar -->
   <aside class="sidebar" aria-label="Main navigation">
     <div class="brand">
@@ -40,20 +10,21 @@
     </div>
 
     <nav class="nav">
-      <a
-        class="nav-item"
-        *ngFor="let item of nav()"
-        [routerLink]="item.path"
-        routerLinkActive="active"
-        (click)="navOpen.set(false)"   
-      >
-        <span class="icon">{{ item.icon }}</span>
-        <span class="label">{{ item.label }}</span>
-      </a>
+      @for (item of nav(); track item.path) {
+        <a
+          class="nav-item"
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          (click)="navOpen.set(false)"
+        >
+          <span class="icon">{{ item.icon }}</span>
+          <span class="label">{{ item.label }}</span>
+        </a>
+      }
     </nav>
   </aside>
 
-  <!-- Handle button (only when collapsed) -->
+  <!-- Handle button (only when sidebar is collapsed) -->
   <button
     class="nav-handle"
     type="button"
@@ -74,10 +45,11 @@
     </div>
 
     <div class="page">
-      <router-outlet></router-outlet>
+      <router-outlet />
     </div>
   </main>
 
-  <!-- Scrim for mobile overlay -->
+  <!-- Scrim (mobile overlay) -->
   <div class="scrim" (click)="navOpen.set(false)"></div>
+
 </div>
